@@ -2,7 +2,7 @@
   <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <router-link :to="{ name: 'HomePage' }" class="navbar-item">
-        <img src="https://www.dogrumimarlikinsaat.com/img/dmLogo.png" width="50" />
+        <img src="https://www.dogrumimarlikinsaat.com/img/dmLogo.png" width="30" />
       </router-link>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

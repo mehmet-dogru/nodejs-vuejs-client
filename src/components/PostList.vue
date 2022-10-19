@@ -1,6 +1,6 @@
 <template>
   <div class="container my-5">
-    <div v-for="post in posts" :key="post._id" class="card mt-3">
+    <div v-if="posts.length > 0" v-for="post in posts" :key="post._id" class="card mt-3">
       <div class="card-content">
         <div class="media">
           <div class="media-content">
@@ -20,6 +20,12 @@
         <button @click="removePost(post._id)" class="card-footer-item button m-3 is-danger">Sil</button>
       </footer>
     </div>
+    <section v-else class="hero is-link">
+      <div class="hero-body">
+        <p class="title">Post Ekleyiniz...</p>
+        <p class="subtitle">Herhangi bir post bulunamamaktadır</p>
+      </div>
+    </section>
   </div>
 </template>
 
