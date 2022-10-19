@@ -24,13 +24,25 @@
     <div class="field is-grouped">
       <div class="control">
         <button type="submit" class="button is-primary">Ekle</button>
+        <button @click="goBack" class="button is-danger mx-3">İptal</button>
       </div>
     </div>
   </form>
 </template>
 
 <script>
+import { useRouter } from "vue-router";
 export default {
   props: ["post", "submitForm"],
+  setup() {
+    const router = useRouter();
+    const goBack = () => {
+      router.push({ name: "HomePage" });
+    };
+
+    return {
+      goBack,
+    };
+  },
 };
 </script>
